@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+} 
+nav{
+    position: fixed;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-image: linear-gradient(to right, #2461de, #187fcb);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+nav .logo{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #f2f2f2;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+    color: #111;
+    background: #fff;
+}
+nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+input[type="checkbox"]{
+    display: none;
+}
+@media (max-width: 1000px){
+    nav{
+        padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+    nav .menu-btn i{
+        display: block;
+  }
+    #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+  }
+    #click:checked ~ ul{
+        left: 0;
+  }
+    nav ul li{
+        width: 100%;
+        margin: 40px 0;
+  }
+    nav ul li a{
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+    #click:checked ~ ul li a{
+        margin-left: 0px;
+  }
+    nav ul li a.active,
+    nav ul li a:hover{
+        background: none;
+        color: #2461de;
+  }
+}
+.home{
+    background-image: url('../images/banner.jpg');
+    display: flex;
+    height: 100vh;
+    color: black;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.home .max-width{
+    margin: auto 0 auto 30px;
+}
+.home .home-content .text-1{
+    font-size: 25px;
+    margin-left: 5%;
+}
+.home .home-content .text-2{
+    font-size: 65px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content a{
+    display: inline-block;
+    background: #2461de;
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid #187fcb;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: white;
+    background: #187fcb;
+}
+/*About Section*/
+.about{
+    text-align: center;
+    display: flex;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.about .title{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 35px;
+    font-weight: 600;
+}
+.about .max-width{
+    margin: auto 30px auto 30px;
+}
+.about .about-content{
+    color: black;
+}
+.about .about-content .head{
+    font-size: 35px;
+    padding-bottom: 30px;
+}
+.about .about-content .head span{
+    color: #2461de;
+}
+.about .about-content .body p{
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 40px;
+}
+/*Contact Section*/
+.contact{
+    text-align: center;
+    background-image: linear-gradient(to right, #2461de, #187fcb);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 40px;
+}
+.contact .title{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+[type=name], input[type=email], input[type=text]{
+    margin: 5px 0 22px 0;
+    border: 0px;
+    display: inline-block;
+    background: #f1f1f1;
+    border-radius: 15px;
+    width: 60%;
+    padding: 15px;
+}
+input[type=text]{
+    padding: 35px;
+}
+input[type=name]:focus, input[type=email]:focus, input[type=text]:focus{
+    background-color: #ddd;
+    outline: none;
+}
+button[type=submit]{
+    background-color: white;
+    color: #2461de;
+    padding: 13px;
+    margin: 8px 0;
+    border-color: black;
+    border: 5px;
+    cursor: pointer;
+    width: 100px;
+    opacity: 90%;
+    border-radius: 15px;
+}
+button[type=submit]:hover{
+    opacity: 100%;
+}
+.footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}

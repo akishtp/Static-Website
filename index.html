@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akish's Personal Wesite</title>
+    <link rel="stylesheet" href="Stylesheet/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Akish tp</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+<section class="home" id="home">
+    <div class="max-width">
+        <div class="home-content">
+            <div class="text-1">Hello, my name is</div>
+            <div class="text-2">Akish tp</div>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+</section>
+<section class="about" id="about">
+    <div class="max-width">
+        <h2 class="title">About me</h2>
+        <div class="about-content">
+            <div class="head">
+                I'm Akish and I'm a <span>Student Programmer</span>
+            </div>
+            <div class="body">
+                <p>Being a +2 Computer Science Student has helped me learn a lot about the basics of 
+                Programming and now I have a Rigid base which helps me learn new thing related to 
+                Programming much easily. My favorite Programming Language is Python and have more than 
+                2 Years of Experience in it.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="max-width">
+        <h2 class="title">Contact Me</h2>
+        <div class="about-content">
+            <form id="submit-form" action="">
+            <input type="name" placeholder="Enter Full Name" name="name" id="fullname" required><br>
+            <input type="email" placeholder="Enter Email" name="email" id="email" required><br>
+            <input type="text" placeholder="Enter your message..." name="message" id="message" required><br>
+            <button type="submit" value="Submit">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="footer" id="footer">
+    <footer>
+        <p class="copyright">Copyright 2020 by Akish. All Rights Reserved.</p><br>
+        <i class="fa fa-github" style="font-size:24px;color:white"></i>
+        <i class="fa fa-facebook-square" style="font-size:24px;color:white"></i>
+        <i class="fa fa-instagram" style="font-size:24px;color:white"></i>
+        <i class="fa fa-linkedin-square" style="font-size:24px;color:white"></i>
+        <i class="fa fa-stack-overflow" style="font-size:24px;color:white"></i>
+        <i class="fa fa-twitter" style="font-size:24px;color:white"></i>
+        <i class="fa fa-youtube-play" style="font-size:24px;color:white"></i>
+    </footer>
+</section>
+<script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbzV0HlHg_JxyZ3jgwB7vnev6wugsR-kqEOp2amJ/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
+</body>
+</html>
